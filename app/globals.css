@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Inter, Helvetica, sans-serif;
+    background-color: #E4BB6A;
+    color: #E4BB6A;
+}
+
+.dark {
+    background-color: #0a1624;
+    color: #E4BB6A;
+}
+
+* {
+    border-color: #E4BB6A;
+}
