@@ -9,14 +9,14 @@ export default function Home() {
       </nav> */}
 
       {/* Main Content */}
-      <main className="flex-1 px-4 md:px-12 py-10">
+      <main className="flex-1 px-4 md:px-16 lg:px-24 py-12 lg:py-16">
         {/* Hero Section */}
-        <section className="mb-12 flex flex-col items-center justify-center">
-          <h1 className="text-6xl md:text-6xl font-serif font-extrabold text-primary mb-6 tracking-tight text-center">Falcon Student Investment Fund</h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-6 max-w-3xl font-sans text-center">
+        <section className="mb-12 mt-48 flex flex-col items-center justify-center">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold text-primary mb-6 tracking-tight text-center">Falcon Student Investment Fund</h1>
+          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/80 mb-6 max-w-4xl font-sans text-center">
             Abu Dhabi's Premier Undergraduate Investment Organization
           </p>
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-12 max-w-3xl font-sans text-center">
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed mb-12 max-w-5xl font-sans text-center">
             At FSIF, we provide students with hands-on investment experience, real-world market exposure, and the opportunity to develop professional skills in the financial industry.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
@@ -30,10 +30,10 @@ export default function Home() {
         </section>
 
         {/* Partners Section */}
-        <section className="mb-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-8">Our Partners</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center">
+        <section className="mb-48 mt-24">
+          <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-4 md:gap-8 lg:gap-12 px-4 md:px-0">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-8 text-center">Our Partners</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 justify-center items-center">
               <a href="https://global.vc" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
                 <img src="/global-ventures.png" alt="Global Ventures" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
               </a>
@@ -57,7 +57,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-10 border-t border-primary/20 text-xs text-foreground/60 text-center mt-12">
+        <footer className="py-10 border-primary/20 text-xs text-foreground/60 text-center">
           <div className="max-w-4xl mx-auto">
             <p>&copy; {new Date().getFullYear()} Falcon Student Investment Fund. All rights reserved.</p>
             <p className="mt-2">
