@@ -14,7 +14,7 @@ export default function Home() {
         <section className="mb-12 mt-48 flex flex-col items-center justify-center">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold text-primary mb-6 tracking-tight text-center">Falcon Student Investment Fund</h1>
           <p className="text-xl md:text-2xl lg:text-3xl text-foreground/80 mb-6 max-w-4xl font-sans text-center">
-            Abu Dhabi's Premier Undergraduate Investment Organization
+            Abu Dhabi's First Student-led Simulated Investment Fund
           </p>
           <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed mb-12 max-w-5xl font-sans text-center">
             At FSIF, we provide students with hands-on investment experience, real-world market exposure, and the opportunity to develop professional skills in the financial industry.
@@ -29,29 +29,91 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Alumni Success Section */}
+        <section className="mb-24 mt-24">
+          <div className="max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 px-4 md:px-0">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-8 text-center">Alumni Success</h2>
+            <p className="text-lg text-foreground/80 mb-8 text-center max-w-3xl">
+              Our talented members have gone on to receive offers from leading financial institutions and investment firms worldwide.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-center items-center w-full">
+              <div className="flex justify-center items-center">
+                <img
+                  src="/ADIA.png"
+                  alt="ADIA"
+                  className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  title="Abu Dhabi Investment Authority"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/Maxim.png"
+                  alt="Maxim Group"
+                  className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  title="Maxim Group"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/Apollo.png"
+                  alt="Apollo Global Management"
+                  className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  title="Apollo Global Management"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/global-ventures.png"
+                  alt="Global Ventures"
+                  className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  title="Global Ventures"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/brevan-howard.png"
+                  alt="Brevan Howard"
+                  className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  title="Brevan Howard"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Partners Section */}
         <section className="mb-48 mt-24">
-          <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-4 md:gap-8 lg:gap-12 px-4 md:px-0">
+          <div className="max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 px-4 md:px-0">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-8 text-center">Our Partners</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 justify-center items-center">
-              <a href="https://global.vc" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src="/global-ventures.png" alt="Global Ventures" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
-              </a>
-              <a href="https://adnocdrilling.ae/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src="/adnoc-drilling.png" alt="ADNOC Drilling" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
-              </a>
-			  <a href="https://adgmacademy.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src="/adgm-academy.png" alt="ADGM Academy" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
-              </a>
-              <a href="https://sarwa.co" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src="/sarwa.png" alt="Sarwa" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
-              </a>
-              <a href="https://magnitudecreative.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src="/magnitude-creative.png" alt="Magnitude Creative" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
-              </a>
-              {/* <a href="https://www.destinationabudhabi.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src="/destination_abudhabi.png" alt="Destination Abu Dhabi" className="h-12 object-contain grayscale hover:grayscale-0 transition" />
-              </a> */}
+            <p className="text-lg text-foreground/80 mb-8 text-center max-w-3xl">
+              FSIF collaborates with industry-leading organizations to provide our members with valuable resources and opportunities.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 justify-center items-center w-full">
+              <div className="flex justify-center items-center">
+                <a href="https://global.vc" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src="/global-ventures.png" alt="Global Ventures" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </a>
+              </div>
+              <div className="flex justify-center items-center">
+                <a href="https://adnocdrilling.ae/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src="/adnoc-drilling.png" alt="ADNOC Drilling" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </a>
+              </div>
+              <div className="flex justify-center items-center">
+                <a href="https://adgmacademy.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src="/adgm-academy.png" alt="ADGM Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </a>
+              </div>
+              <div className="flex justify-center items-center">
+                <a href="https://sarwa.co" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src="/sarwa.png" alt="Sarwa" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </a>
+              </div>
+              <div className="flex justify-center items-center col-span-2 md:col-span-4 mt-4">
+                <a href="https://magnitudecreative.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src="/magnitude-creative.png" alt="Magnitude Creative" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </a>
+              </div>
             </div>
           </div>
         </section>
