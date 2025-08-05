@@ -6,7 +6,7 @@ export default function TeamPage() {
       <h1 className="text-5xl font-serif font-extrabold text-primary mb-12 tracking-tight text-center">Our Team</h1>
 
       {/* Executive Team */}
-      <section className="mb-16">
+{/*       <section className="mb-16">
         <h2 className="text-3xl font-serif font-bold text-primary mb-8">Executive Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-center">
@@ -42,46 +42,46 @@ export default function TeamPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Operations Team */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-serif font-bold text-primary mb-8">Operations Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center">
-            <img src="/humaid-alaryani.jpg" alt="Humaid Al Aryani" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
-            <div className="text-center">
-              <h4 className="font-bold text-lg text-foreground">Humaid Al Aryani</h4>
-              <p className="text-primary font-semibold">Head of Marketing</p>
-              <p className="text-xs text-foreground/70 mb-2">Zayed University</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src="/hasan-alhashmi.jpg" alt="Hasan Al Hashmi" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
-            <div className="text-center">
-              <h4 className="font-bold text-lg text-foreground">Hasan Al Hashmi</h4>
-              <p className="text-primary font-semibold">Head of Public Relations</p>
-              <p className="text-xs text-foreground/70 mb-2">Zayed University</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src="/noor-amiri.jpg" alt="Noor Amiri" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
-            <div className="text-center">
-              <h4 className="font-bold text-lg text-foreground">Noor Amiri</h4>
-              <p className="text-primary font-semibold">Head of Logistics</p>
-              <p className="text-xs text-foreground/70 mb-2">NYU Abu Dhabi</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src="/abdulrafay.jpg" alt="Abdul Rafay" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
-            <div className="text-center">
-              <h4 className="font-bold text-lg text-foreground">Abdul Rafay</h4>
-              <p className="text-primary font-semibold">Head of Outreach</p>
-              <p className="text-xs text-foreground/70 mb-2">NYU Abu Dhabi</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      // <section className="mb-16">
+      //   <h2 className="text-3xl font-serif font-bold text-primary mb-8">Operations Team</h2>
+      //   <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      //     <div className="flex flex-col items-center">
+      //       <img src="/humaid-alaryani.jpg" alt="Humaid Al Aryani" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
+      //       <div className="text-center">
+      //         <h4 className="font-bold text-lg text-foreground">Humaid Al Aryani</h4>
+      //         <p className="text-primary font-semibold">Head of Marketing</p>
+      //         <p className="text-xs text-foreground/70 mb-2">Zayed University</p>
+      //       </div>
+      //     </div>
+      //     <div className="flex flex-col items-center">
+      //       <img src="/hasan-alhashmi.jpg" alt="Hasan Al Hashmi" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
+      //       <div className="text-center">
+      //         <h4 className="font-bold text-lg text-foreground">Hasan Al Hashmi</h4>
+      //         <p className="text-primary font-semibold">Head of Public Relations</p>
+      //         <p className="text-xs text-foreground/70 mb-2">Zayed University</p>
+      //       </div>
+      //     </div>
+      //     <div className="flex flex-col items-center">
+      //       <img src="/noor-amiri.jpg" alt="Noor Amiri" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
+      //       <div className="text-center">
+      //         <h4 className="font-bold text-lg text-foreground">Noor Amiri</h4>
+      //         <p className="text-primary font-semibold">Head of Logistics</p>
+      //         <p className="text-xs text-foreground/70 mb-2">NYU Abu Dhabi</p>
+      //       </div>
+      //     </div>
+      //     <div className="flex flex-col items-center">
+      //       <img src="/abdulrafay.jpg" alt="Abdul Rafay" className="h-36 w-36 object-cover rounded-lg mb-4 border-2 border-primary/50" />
+      //       <div className="text-center">
+      //         <h4 className="font-bold text-lg text-foreground">Abdul Rafay</h4>
+      //         <p className="text-primary font-semibold">Head of Outreach</p>
+      //         <p className="text-xs text-foreground/70 mb-2">NYU Abu Dhabi</p>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </section>
 
       {/* Investments Team */}
       <section className="mb-16">
