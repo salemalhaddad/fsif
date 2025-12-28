@@ -3,6 +3,10 @@ module.exports = {
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        serif: ["var(--font-serif)"],
+      },
       colors: {
         stone: {
           200: "#e7e5e4",
@@ -50,8 +54,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        "grid-slate":
+          "linear-gradient(90deg, rgba(15, 30, 41, 0.08) 1px, transparent 1px), linear-gradient(rgba(15, 30, 41, 0.08) 1px, transparent 1px)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
 }
-

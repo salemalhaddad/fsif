@@ -1,15 +1,33 @@
 import Link from "next/link";
 
+const navLinks = [
+  { href: "/about", label: "About" },
+  { href: "/strategy", label: "Strategy" },
+  { href: "/publications", label: "Publications" },
+  { href: "/team", label: "Team" },
+];
+
 export default function Navbar() {
   return (
-    <nav className="w-full flex justify-center py-6 bg-background/80 backdrop-blur-md z-50 border-b border-primary/20">
-      <div className="flex gap-8 text-lg font-semibold">
-        <Link href="/about" className="hover:text-primary transition-colors">About</Link>
-        <Link href="/strategy" className="hover:text-primary transition-colors">Strategy</Link>
-        <Link href="/team" className="hover:text-primary transition-colors">Team</Link>
-        <Link href="/advisors" className="hover:text-primary transition-colors">Advisors</Link>
-        <Link href="/publications" className="hover:text-primary transition-colors">Publications</Link>
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
+        <Link href="/" className="flex flex-col leading-none">
+          <span className="text-lg font-serif text-foreground">Falcon Student Investment Fund</span>
+        </Link>
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/join"
+            className="rounded-full border border-foreground/20 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+          >
+            Join
+          </Link>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

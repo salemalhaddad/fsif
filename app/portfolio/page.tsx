@@ -54,107 +54,99 @@ export default function PortfolioPage() {
     fetchStockData();
   }, []);
   return (
-    <main className="min-h-screen bg-background text-foreground px-4 md:px-12 py-10">
-      <h1 className="text-5xl font-serif font-extrabold text-primary mb-12 tracking-tight text-center">Portfolio</h1>
-
-      {/* Portfolio Overview */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-serif font-bold text-primary mb-8">Current Holdings</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Borouge Card */}
-          <div className="bg-background/80 border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-foreground">Borouge</h3>
-                <p className="text-sm text-foreground/80">ADX: BOROUGE</p>
-              </div>
-              <div className="text-primary font-bold text-2xl">5%</div>
-            </div>
-            <div className="bg-primary/10 h-2 rounded-full">
-              <div className="bg-primary h-2 rounded-full" style={{ width: "5%" }}></div>
-            </div>
-          </div>
-
-          {/* Walmart Card */}
-          <div className="bg-background/80 border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-all">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-foreground">Walmart</h3>
-                <p className="text-sm text-foreground/80">NYSE: WMT</p>
-              </div>
-              <div className="text-primary font-bold text-2xl">5%</div>
-            </div>
-            <div className="bg-primary/10 h-2 rounded-full">
-              <div className="bg-primary h-2 rounded-full" style={{ width: "5%" }}></div>
-            </div>
-          </div>
+    <main className="mx-auto w-full max-w-6xl px-6 py-16">
+      <div className="flex flex-col gap-12">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">Portfolio</p>
+          <h1 className="mt-4 text-4xl font-semibold text-foreground">A simulated portfolio managed with institutional rigor.</h1>
+          <p className="mt-6 max-w-2xl text-base text-muted-foreground">
+            Our holdings reflect disciplined research, strict risk limits, and diversified exposure across the UAE market and global equities.
+          </p>
         </div>
-      </section>
 
-      {/* Portfolio Performance */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-serif font-bold text-primary mb-8">Performance</h2>
-        <div className="bg-background/80 border border-primary/20 rounded-lg p-6 hover:shadow-lg transition-all">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Borouge Returns</h3>
-              {isLoading ? (
-                <div className="animate-pulse">Loading...</div>
-              ) : borougeData ? (
-                <div>
-                  <p className="text-lg text-foreground mb-2">Since March 23rd, 2025</p>
-                  <div className="flex items-center">
-                    <p className={`text-2xl font-bold ${borougeData.changePercent >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                      {borougeData.changePercent}%
-                    </p>
-                    <p className="ml-2 text-sm text-foreground/80">
-                      ({borougeData.change >= 0 ? '+' : ''}{borougeData.change})
-                    </p>
+        <section>
+          <h2 className="text-2xl font-semibold text-foreground">Current Holdings</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {[
+              { name: "Borouge", ticker: "UAE Market", weight: 5 },
+              { name: "Walmart", ticker: "Global Large Cap", weight: 5 },
+            ].map((holding) => (
+              <div key={holding.name} className="rounded-2xl border border-border/70 bg-card/80 p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">{holding.name}</h3>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">{holding.ticker}</p>
                   </div>
-                  <p className="text-sm text-foreground/80 mt-2">
-                    Current Price: AED {borougeData.currentPrice}
-                  </p>
-                  <p className="text-sm text-foreground/80">
-                    March 23rd Price: AED {borougeData.previousClose}
-                  </p>
+                  <div className="text-xl font-semibold text-foreground">{holding.weight}%</div>
                 </div>
-              ) : (
-                <p className="text-red-400">Error loading stock data</p>
-              )}
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Portfolio Impact</h3>
-              <p className="text-sm text-foreground/80">
-                With a 5% allocation to Borouge, these returns represent:
-              </p>
-              {borougeData && (
-                <div className="mt-2">
-                  <p className="text-lg font-semibold">
-                    {borougeData.changePercent >= 0 ? '+' : ''}
-                    {borougeData.changePercent * 0.05}% contribution to portfolio
-                  </p>
-                  <p className="text-sm text-foreground/80">
-                    Based on $100,000 portfolio value
-                  </p>
+                <div className="mt-4 h-2 rounded-full bg-muted">
+                  <div className="h-2 rounded-full bg-primary" style={{ width: `${holding.weight}%` }} />
                 </div>
-              )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-foreground">Performance Snapshot</h2>
+          <div className="mt-6 rounded-2xl border border-border/70 bg-card/80 p-6">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">Borouge Returns</h3>
+                {isLoading ? (
+                  <div className="mt-3 animate-pulse text-sm text-muted-foreground">Loading latest quote...</div>
+                ) : borougeData ? (
+                  <div className="mt-4">
+                    <p className="text-sm text-muted-foreground">Since March 23rd, 2025</p>
+                    <div className="mt-3 flex items-center gap-2">
+                      <p className={`text-2xl font-semibold ${borougeData.changePercent >= 0 ? 'text-emerald-600' : 'text-red-500'}`}>
+                        {borougeData.changePercent}%
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        ({borougeData.change >= 0 ? "+" : ""}
+                        {borougeData.change})
+                      </p>
+                    </div>
+                    <div className="mt-3 text-sm text-muted-foreground">
+                      <p>Current Price: AED {borougeData.currentPrice}</p>
+                      <p>March 23rd Price: AED {borougeData.previousClose}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="mt-3 text-sm text-red-500">Error loading stock data.</p>
+                )}
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">Portfolio Impact</h3>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  With a 5% allocation to Borouge, these returns represent:
+                </p>
+                {borougeData && (
+                  <div className="mt-4">
+                    <p className="text-lg font-semibold text-foreground">
+                      {borougeData.changePercent >= 0 ? "+" : ""}
+                      {(borougeData.changePercent * 0.05).toFixed(2)}% contribution
+                    </p>
+                    <p className="text-sm text-muted-foreground">Based on a $100,000 simulated portfolio value.</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Investment Philosophy */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-serif font-bold text-primary mb-8">Investment Philosophy</h2>
-        <div className="prose prose-invert max-w-none">
-          <p>Our portfolio focuses on long-term value investing in established companies with strong fundamentals and growth potential. We maintain a disciplined approach to diversification and risk management.</p>
-          <p>Current holdings include:</p>
-          <ul className="list-disc pl-5">
-            <li>Borouge - A leading petrochemical company in the UAE</li>
-            <li>Walmart - A global retail giant with strong market position</li>
-          </ul>
-        </div>
-      </section>
+        <section>
+          <h2 className="text-2xl font-semibold text-foreground">Investment Philosophy</h2>
+          <div className="mt-4 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-border/70 bg-card/70 p-6 text-sm text-muted-foreground">
+              We focus on long-term value creation, emphasizing durable business models, capital discipline, and prudent valuation.
+            </div>
+            <div className="rounded-2xl border border-border/70 bg-card/70 p-6 text-sm text-muted-foreground">
+              Portfolio construction balances conviction with diversification, ensuring risk-adjusted performance over full cycles.
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
